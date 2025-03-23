@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Unique - Solidarité Palestine</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg mb-8">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-bold text-2xl text-green-600">Solidarité Palestine</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">Don Unique</h1>
+        
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Choisissez votre montant</h2>
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <button class="p-4 border rounded-lg hover:bg-green-50 focus:ring-2 focus:ring-green-500">30€</button>
+                    <button class="p-4 border rounded-lg hover:bg-green-50 focus:ring-2 focus:ring-green-500">50€</button>
+                    <button class="p-4 border rounded-lg hover:bg-green-50 focus:ring-2 focus:ring-green-500">100€</button>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 mb-2">Autre montant</label>
+                    <input type="number" class="w-full p-2 border rounded" placeholder="Montant personnalisé">
+                </div>
+            </div>
+
+            <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Prénom</label>
+                        <input type="text" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Nom</label>
+                        <input type="text" class="w-full p-2 border rounded" required>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full p-2 border rounded" required>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 mb-2">Message (optionnel)</label>
+                    <textarea class="w-full p-2 border rounded" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700">
+                    Faire mon don
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Gestion des boutons de montant
+        const amountButtons = document.querySelectorAll('.grid button');
+        const customAmount = document.querySelector('input[type="number"]');
+
+        amountButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                amountButtons.forEach(b => b.classList.remove('bg-green-50'));
+                button.classList.add('bg-green-50');
+                customAmount.value = '';
+            });
+        });
+    </script>
+</body>
+</html>

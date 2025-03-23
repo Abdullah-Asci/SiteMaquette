@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Matériel - Solidarité Palestine</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg mb-8">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-bold text-2xl text-green-600">Solidarité Palestine</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">Don Matériel</h1>
+        
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Types de dons acceptés</h2>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold mb-2">Vêtements</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Vêtements chauds</li>
+                            <li>Vêtements enfants</li>
+                            <li>Chaussures</li>
+                            <li>Couvertures</li>
+                        </ul>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold mb-2">Matériel médical</h3>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Pansements</li>
+                            <li>Médicaments non périmés</li>
+                            <li>Matériel de premiers soins</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Prénom</label>
+                        <input type="text" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Nom</label>
+                        <input type="text" class="w-full p-2 border rounded" required>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full p-2 border rounded" required>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 mb-2">Téléphone</label>
+                    <input type="tel" class="w-full p-2 border rounded" required>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 mb-2">Description des dons</label>
+                    <textarea class="w-full p-2 border rounded" rows="4" required 
+                        placeholder="Décrivez les articles que vous souhaitez donner..."></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 mb-2">Point de collecte préféré</label>
+                    <select class="w-full p-2 border rounded" required>
+                        <option value="">Sélectionnez un point de collecte</option>
+                        <option value="paris">Paris - 10ème</option>
+                        <option value="lyon">Lyon - Centre</option>
+                        <option value="marseille">Marseille - Vieux Port</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700">
+                    Proposer mon don
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
